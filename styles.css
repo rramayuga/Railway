@@ -1,39 +1,38 @@
-/* Reset some default styles */
-body, h1, h2, h3, ul, li, p {
+
+body, h1, h2, h3, ul, li, p, input, select, textarea, button {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: Arial, sans-serif;
-    background-color: #292b2c;
     color: #fff;
 }
 
-.header {
+body {
+    background-color: #292b2c;
+}
+
+.header, .nav {
     background-color: #343a40;
+}
+
+.header {
     text-align: center;
     padding: 20px 0;
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 2rem;
     color: #fff;
-}
-
-.nav {
-    background-color: #343a40;
-    padding: 10px 0;
 }
 
 .nav-list {
     list-style: none;
     text-align: center;
+    padding: 1rem 0;
 }
 
 .nav-list li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 1rem;
 }
 
 .nav-list a {
@@ -51,18 +50,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .section {
     flex-basis: calc(33.33% - 20px);
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
     background-color: #343a40;
     border: 1px solid #444c54;
     border-radius: 10px;
-    padding: 20px;
+    padding: 2rem;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     display: flex;
@@ -76,212 +76,79 @@ body {
 }
 
 .section-title {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 1.5rem; 
+    margin-bottom: 1rem;
 }
 
 .section-text {
-    font-size: 18px;
+    font-size: 1rem; 
     color: #f8f9fa;
 }
 
 .footer {
     background-color: #292b2c;
-    padding: 10px 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
 .footer-text {
-    font-size: 14px;
+    font-size: 0.875rem; 
     color: #f8f9fa;
 }
-/* Styles for the whole page (similar to previous styles) */
 
-.booking-form {
-    padding: 20px;
-    background-color: #343a40;
+/* Specific page styles (ticket booking page) */
+.booking-form, .search-form, .select-form {
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #343a40;
     color: #f8f9fa;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 1rem; 
+    margin-bottom: 0.5rem;
 }
 
-.form-group input,
-.form-group select {
+.form-group input, .form-group select, .search-form input, .search-form select, .select-form select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    padding: .2rem;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    color: #333; 
 
-#search-btn {
-    background-color: #ffc107;
-    color: #343a40;
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 1rem 2rem;
     border: none;
-    padding: 10px 20px;
-    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#search-btn:hover {
-    background-color: #343a40;
-    color: #ffc107;
-}
-
-/* Additional styles (similar to previous styles) */
-/* Basic styles for the whole page */
-/* ... (same as before) ... */
-
-/* Additional styles for the specific page */
-.content-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.search-form {
-    display: inline-block;
-    text-align: left;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-}
-
-.search-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.search-form input[type="text"],
-.search-form input[type="date"],
-.search-form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.search-button:hover {
+button:hover {
     background-color: #0056b3;
 }
-/* Additional styles (you can add more as needed) */
-/* Basic styles for the whole page */
-/* ... (same as before) ... */
 
-/* Additional styles for the specific page */
-.content-container {
-    padding: 20px;
-    text-align: center;
-}
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .sections-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.search-form {
-    display: inline-block;
-    text-align: left;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    .section {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
 }
-
-.search-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
-
-.search-form input[type="text"],
-.search-form input[type="date"],
-.search-form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.search-button:hover {
-    background-color: #0056b3;
-}
-/* Additional styles (you can add more as needed) */
-/* Basic styles for the whole page */
-/* ... (same as before) ... */
-
-/* Additional styles for the specific page */
-.content-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.select-form {
-    display: inline-block;
-    text-align: left;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-}
-
-.select-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.select-form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.select-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.select-button:hover {
-    background-color: #0056b3;
-}
-/* Additional styles (you can add more as needed) */
