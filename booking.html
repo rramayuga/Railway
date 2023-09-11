@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Module</title>
+    <link rel="stylesheet" href="booking_styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Railway Reservation System</h1>
+    </header>
+    
+    <nav class="nav">
+        <!-- Navigation links here -->
+    </nav>
+    
+    <div class="sections-container">
+        <section id="booking" class="section">
+            <h2 class="section-title">Ticket Booking Module</h2>
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="source">Source:</label>
+                    <input type="text" id="source" name="source" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <select id="class" name="class">
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="button" id="search-btn">Search Trains</button>
+            </form>
+            <div id="search-results" class="search-results"></div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p class="footer-text">&copy; 2023 Railway Reservation System</p>
+        <a href="index.html">Back to Homepage</a>
+    </footer>
+    
+    <script src="ticket_booking.js"></script>
+</body>
+</html>
